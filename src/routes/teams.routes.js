@@ -1,8 +1,12 @@
 import { Router } from "express";
-import { personalDetails } from "../controllers/teams.controllers.js";
+import {
+  officialDetails,
+  personalDetails,
+} from "../controllers/teams.controllers.js";
 
 const router = Router();
 
-router.route("/userPersonalDetails").post(personalDetails);
+router.route("/addPersonalDetails").post(personalDetails);
+router.route("/addOfficialDetails").post(officialDetails);
 
 export default router;
